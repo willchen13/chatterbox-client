@@ -17,7 +17,9 @@ var FormView = {
       roomname: "noroomyet"
     };
     Parse.create(Mymessage, notifyMessageSent);
-    console.log('click!');
+    //$(() => App.initialize());
+
+    //console.log('click!');
   },
 
   setStatus: function(active) {

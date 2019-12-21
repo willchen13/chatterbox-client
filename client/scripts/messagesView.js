@@ -3,7 +3,9 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-
+    //get messages from the server
+    
+    //display them on the screen
   },
 
   render: function() {

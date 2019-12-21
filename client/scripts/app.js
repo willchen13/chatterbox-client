@@ -24,6 +24,7 @@ var App = {
       data.results.forEach((user)=>{
         MessagesView.renderMessage(user);
       });
+
       callback();
     });
   },

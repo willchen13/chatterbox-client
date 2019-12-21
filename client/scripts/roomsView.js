@@ -5,15 +5,6 @@ var RoomsView = {
 
   initialize: function () {
 
-    // Parse.readAll((data) => {
-      // // examine the response from the server request:
-      // console.log(data);
-
-      // callback();
-  //     data.forEach((user)=>{
-
-  //     }
-  //   });
    },
 
   render: function () {
