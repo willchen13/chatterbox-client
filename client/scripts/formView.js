@@ -9,7 +9,14 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
+    var notifyMessageSent = function () { console.log(" Message sent ")};
+    //console.log(message.valueOf());
+    var Mymessage = {
+      username: window.location.search.slice(10),
+      text: message.value,
+      roomname: 'noroom'
+    };
+    Parse.create(Mymessage, notifyMessageSent);
     console.log('click!');
   },
 
