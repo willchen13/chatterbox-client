@@ -13,7 +13,7 @@ var App = {
 
     // Fetch initial batch of messages
     App.startSpinner();
-    App.fetch(App.stopSpinner);
+    App.fetch(App.stopSpinner());
 
   },
 
@@ -21,7 +21,9 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);
-
+      data.results.forEach((user)=>{
+        MessagesView.renderMessage(user);
+      });
       callback();
     });
   },
@@ -36,3 +38,5 @@ var App = {
     FormView.setStatus(false);
   }
 };
+
+// (da) => { console.log(da) };

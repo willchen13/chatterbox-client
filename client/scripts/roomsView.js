@@ -3,26 +3,29 @@ var RoomsView = {
   $button: $('#rooms button'),
   $select: $('#rooms select'),
 
-  initialize: function() {
+  initialize: function () {
+
+    // Parse.readAll((data) => {
+      // // examine the response from the server request:
+      // console.log(data);
+
+      // callback();
+  //     data.forEach((user)=>{
+
+  //     }
+  //   });
+   },
+
+  render: function () {
   },
 
-  render: function() {
-    '<option class=\'roomX\'>' + '<%roomname%>' + '</option>';
-  },
-
-  renderRoom: function(roomname) {
+  renderRoom: function (roomname) {
 
 
-    render: _.template(
-      '<div class=\'chat\'>' +
-        '<div class=\'username\'>' + '<% message.username%>' + '</div>' +
-        '<div class=\'text\'>' + '<% message.text%>' + '</div>' +
-        '<div class=\'roomname\'>' + '<% message.roomname%>' + '</div>' +
-      '</div>'
-    );
+    //var roomNameX = RoomView.render(roomname);
 
 
-    this.$select.append(roomname);
+    this.$select.append(`<option value="${roomname}"> ${roomname} </option>`);
 
   }
 
